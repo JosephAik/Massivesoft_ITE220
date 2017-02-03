@@ -30,7 +30,7 @@
         <div class='row'>";
           for ($i=0 ; $i < 6; $i++) 
           { 
-  echo " <div class='col center-block'>    
+echo "      <div class='col center-block'>    
               <div class='card' style='width: 21rem;'>
                 <div class='card-header'><span class='badge badge-pill badge-default'>".$product[$i][1]."</span></div>
                   <img class='card-img-top img-fluid' src='".$product[$i][3]."' alt='".$product[$i][2]."'>
@@ -38,14 +38,26 @@
                     <h3 class='card-title'>".$product[$i][0]."</h3>
                     <p class='card-text'>".$product[$i][4]."</p>
                     <h3 style='text-align: right;''>$".$product[$i][5]."</h3>
+                    <form class='form-inline' action='cart.php' method='GET'>
+                        <div class='form-group-sm col'>
+                          <label class='sr-only' for='exampleInputAmount'>Amount</label>
+                          <div class='input-group'>
+                              <input name='prodAmount' value='1' type='number' class='form-control' id='Amount' placeholder='1'>
+                              <div for='Amount' class='input-group-addon'>Copies</div>
+                              <button name='prodID' value='".$i."' type='submit' class='btn btn-primary'>Add to cart</button>
+                          </div>
+                        </div>
+                    </form>
                   </div>
                 </div>
                 <br>
               </div>            
             ";
           };
-  echo "        </div>";?>
-	</div></div>
+  echo "        
+            </div>";?>
+	         </div>
+          </div>
 
   <?php include 'footer.php';?>
 </body>
