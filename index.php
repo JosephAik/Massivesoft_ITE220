@@ -11,9 +11,9 @@
 		<div class="col-14"><img src="/Massivesoft/content/img/Massivesoft_logo_b.png" class="img-fluid" alt="Massivesoft_Logo"></div><br>
     <ul class="nav nav-pills nav-fill nav-justified">
   			<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="aboutus.php">About Us</a></li>
   			<li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
   			<li class="nav-item"><a class="nav-link" href="shop.php">Shop</a></li>
+	    		<li class="nav-item"><a class="nav-link" href="aboutus.php">About Us</a></li>
 		</ul><hr>
     <div class="col">
       <h1>Welcome to Massivesoft Homepage!</h1><br>
