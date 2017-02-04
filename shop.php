@@ -11,6 +11,7 @@
 			<div class="col-14"><img src="/Massivesoft/content/img/Massivesoft_logo_b.png" class="img-fluid" alt="Massivesoft_Logo"></div><br>
 			<ul class="nav nav-pills nav-fill nav-justified">
   				<li class="nav-item"><a class="nav-link" href="index.php">Home</a>
+  				<li class="nav-item"><a class="nav-link" href="aboutus.php">About Us</a></li>
   				</li><li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
   				<li class="nav-item"><a class="nav-link active" href="#">Shop</a></li>
 			</ul><hr>
@@ -36,16 +37,16 @@ echo " 			<div class='col center-block'>
                   		<div class='card-block'>
                    			<h3 class='card-title'>".$product[$i][0]."</h3>
                    			<p class='card-text'>".$product[$i][4]."</p>
-                   			<h3 style='text-align: right;''>$".$product[$i][5]."</h3>
+                   			<h3 style='text-align: right;''><span class='badge badge-pill badge-default'>$".$product[$i][5]."</span></h3>
                   		</div>
 							<div class='card-footer'>
 								<form class='form-inline' action='cart.php' method='GET'>
                         			<div class='form-group-sm col'>
                           				<label class='sr-only' for='exampleInputAmount'>Amount</label>
                           				<div class='input-group'>
+											<div for='Quantity' class='input-group-addon'>Quantity</div>
                              				<input name='prodAmount' value='1' type='number' class='form-control' id='Amount' placeholder='1'>
-                              				<div for='Amount' class='input-group-addon'>Copies</div>
-                              				<button name='prodID' value='".$i."' type='submit' class='btn btn-primary'><i class='fa fa-shopping-cart' aria-hidden='true'></i> Add to cart</button>
+                              				<span class='input-group-btn'><button name='prodID' value='".$i."' type='submit' class='btn btn-success' data-toggle='tooltip' data-placement='top' title='Add to cart'><i class='fa fa-shopping-cart' aria-hidden='true'></i></button></span>
                           				</div>
                         			</div>
                     			</form>
