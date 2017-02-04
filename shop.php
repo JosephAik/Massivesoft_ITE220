@@ -17,43 +17,44 @@
 		</div>
 <?php  
 	include 'productsList.php';
-	$customerNAME = "Bob";
+	$customerNAME = $_COOKIE['userlogin'];
 	$customerCART = "0";
 echo "	<div class='container-fluid jumbotron'>
-				<div class='well well-sm'>
-					<h1 style='text-align:left;float:left;'>Online Store</h1>
-					<h3 style='float:right;'>Hello ".$customerNAME." !</h3>
-					<br><br>
-					<p style='text-align:right;'><i class='fa fa-shopping-cart' aria-hidden='true'></i> item(s): <a href='cart.php'>".$customerCART."</a></p>
-				</div>
-				<div class='row'>";
-					for ($i=0 ; $i < 6; $i++) 
-          			{ 
-echo " 				<div class='col center-block'>    
-              			<div class='card' style='width: 21rem;'>
-                			<div class='card-header'><span class='badge badge-pill badge-default'>".$product[$i][1]."</span></div>
-                  			<img class='card-img-top img-fluid' src='".$product[$i][3]."' alt='".$product[$i][2]."'>
-                  			<div class='card-block'>
-                   				<h3 class='card-title'>".$product[$i][0]."</h3>
-                   				<p class='card-text'>".$product[$i][4]."</p>
-                   				<h3 style='text-align: right;''>$".$product[$i][5]."</h3>
+			<div class='well well-sm'>
+				<h1 style='text-align:left;float:left;'>Online Store</h1>
+				<h3 style='float:right;'>Hello ".$customerNAME." !</h3>
+				<br><br>
+				<p style='text-align:right;'><i class='fa fa-shopping-cart' aria-hidden='true'></i> item(s): <a href='cart.php'>".$customerCART."</a></p>
+			</div>
+			<div class='card-group'>";
+				for ($i=0 ; $i < sizeof($product); $i++) 
+          		{ 
+echo " 			<div class='col center-block'>    
+              		<div class='card' style='width: 21rem;'>
+                		<div class='card-header'><span class='badge badge-pill badge-default'>".$product[$i][1]."</span></div>
+                  		<img class='card-img-top img-fluid' src='".$product[$i][3]."' alt='".$product[$i][2]."'>
+                  		<div class='card-block'>
+                   			<h3 class='card-title'>".$product[$i][0]."</h3>
+                   			<p class='card-text'>".$product[$i][4]."</p>
+                   			<h3 style='text-align: right;''>$".$product[$i][5]."</h3>
+                  		</div>
+							<div class='card-footer'>
 								<form class='form-inline' action='cart.php' method='GET'>
                         			<div class='form-group-sm col'>
                           				<label class='sr-only' for='exampleInputAmount'>Amount</label>
                           				<div class='input-group'>
                              				<input name='prodAmount' value='1' type='number' class='form-control' id='Amount' placeholder='1'>
                               				<div for='Amount' class='input-group-addon'>Copies</div>
-                              				<button name='prodID' value='".$i."' type='submit' class='btn btn-primary'>Add to cart</button>
+                              				<button name='prodID' value='".$i."' type='submit' class='btn btn-primary'><i class='fa fa-shopping-cart' aria-hidden='true'></i> Add to cart</button>
                           				</div>
                         			</div>
                     			</form>
-                  			</div>
-                		</div><br>
-              		</div>";
+                    		</div>
+                	</div><br>
+              	</div>";
           			};
 echo "        
-            	</div>";?>
-	        </div>
+            </div>";?>
         </div>
 	<?php include 'footer.php';?>
 	</body>

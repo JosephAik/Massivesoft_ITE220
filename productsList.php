@@ -1,5 +1,5 @@
 <?php 
-# Array format as" array("0Fullprod_Name","1Software_Type","2Alt_name","3Box_Art/Link","4Details",5price);"
+# Array format for product list as "array("0Fullprod_Name","1Software_Type","2Alt_name","3Box_Art/Link","4Details",5price);"
 
 	$product = array(
 	array("Massivesoft Doors OS 10 Pro","Operating System","MS Door 10 Pro","/Massivesoft/content/store/Door10Box.jpg",
